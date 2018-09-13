@@ -1,6 +1,6 @@
 import inquirer from 'inquirer';
-//import XLSX from 'xlsx';
 import _ from 'lodash';
+import gen from './src/generator';
 
 const askAmount = () => {
   const q = [
@@ -31,9 +31,12 @@ askAmount()
   })
   .then(answers => {
     const names = Object.keys(answers).map(key => answers[key]);
-    const sheets = _.map(names, (name, i, arr) => {
+    return _.map(names, (name, i, arr) => {
       return { name, others: _.filter(arr, (el, j) => j !== i), };
     });
-    console.log(sheets);
+  })
+  .then(sheets => {
+    gen.addNames(sheets);
+    gen.generate();
   })
   .catch(err => console.log(err));
