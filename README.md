@@ -11,6 +11,7 @@ This script generates a .xlsx file that can be used for cost splitting while tra
 ## to-do
 
 - overview sheet
+- styling
 
 ## How to use
 
