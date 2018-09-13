@@ -5,16 +5,23 @@
   "main": "index.js",
   "author": "Jefwillems <jefwillems100@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "start": "node ./dist/bundle.js",
+    "prestart": "webpack --mode=production",
+    "test": "./dist/costtracker.js",
+    "pretest": "webpack --mode=development && chmod +x ./dist/costtracker.js",
+    "build": "webpack --mode=production"
+  },
   "private": false,
   "dependencies": {
     "chalk": "^2.4.1",
-    "commander": "^2.18.0",
     "inquirer": "^6.2.0",
+    "lodash": "^4.17.11",
     "xlsx": "^0.14.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
-    "babel-loader": "^8.0.2",
+    "babel-loader": "^7.1.5",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "eslint": "^5.5.0",
