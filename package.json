@@ -1,0 +1,24 @@
+{
+  "name": "costtracker",
+  "version": "1.0.0",
+  "description": "Package that generates cost tracking xlsx sheets for traveling friends",
+  "main": "index.js",
+  "author": "Jefwillems <jefwillems100@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "commander": "^2.18.0",
+    "inquirer": "^6.2.0",
+    "xlsx": "^0.14.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.2",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^5.5.0",
+    "webpack": "^4.18.1",
+    "webpack-cli": "^3.1.0"
+  }
+}
